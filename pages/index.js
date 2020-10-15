@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
-import vercelIcon from '../public/vercel.svg'
+import Logo from '../public/22222.png'
 export default function Home() {
     return (
         <div className={styles.container}>
@@ -58,7 +58,7 @@ export default function Home() {
                     rel="noopener noreferrer"
                 >
                     Powered by{' '}
-                    <img src={vercelIcon} alt="Vercel Logo" className={styles.logo} />
+                    <img src={Logo} alt="Vercel Logo" className={styles.logo} />
                 </a>
             </footer>
         </div>
