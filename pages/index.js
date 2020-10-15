@@ -2,6 +2,8 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import Logo from '../public/22222.png'
+import Section1Bg from '../public/main_section1_bg.png'
+
 export default function Home() {
     return (
         <div className={styles.container}>
@@ -11,9 +13,11 @@ export default function Home() {
             </Head>
 
             <main className={styles.main}>
-                <h1 className={styles.title}>
-                    Welcome to a <a href="https://nextjs.org">Next.js!</a>
-                </h1>
+                <section className={styles.section1}>
+                    <h1 className={styles.title}>
+                        M RESEARCH
+                    </h1>
+                </section>
                 <Link href="/company"><a>회사</a></Link>
                 <p className={styles.description}>
                     Get started by editing{' '}
