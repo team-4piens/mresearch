@@ -5,6 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .main {
@@ -16,16 +17,19 @@
 }
 
 .footer {
-    width: 100%;
+    margin-top: 6px;
+    width: 100vw;
     height: 100px;
     border-top: 1px solid #eaeaea;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    background-color: black;
 }
 
 .footer img {
-    margin-left: 0.5rem;
+    height: 24px;
 }
 
 .footer a {
@@ -118,18 +122,20 @@
     width: 100vw;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
     position: relative;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .container>main>.section1::after {
     content: '';
     background-size: 100% 100%;
+    background-size: cover;
     background-position: top;
-    background-image: url(../public//main_section1_bg.png);
+    background-image: url(../public/main_section1_bg.png);
     background-repeat: no-repeat;
     position: absolute;
     width: 100%;
@@ -137,4 +143,190 @@
     left: 0;
     top: 0;
     z-index: -1;
+}
+
+.section1>h1 {
+    margin-bottom: 32px;
+}
+
+@media(max-width: 767px) {
+    .section1>.title {
+        font-size: 40px!important;
+    }
+}
+
+.section1>h2 {
+    margin-bottom: 0;
+}
+
+.section1>.vision {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 32px 24px;
+}
+
+.header>img {
+    height: 24px;
+}
+
+.product_link_container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 6px;
+    padding: 0 12px;
+}
+
+.product_link {
+    width: calc(50% - 3px);
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    background: rgba(0, 0, 0, 0.7);
+    position: relative;
+}
+
+@media(max-width: 767px) {
+    .product_link {
+        width: 100%;
+    }
+    .product_link_container {
+        padding: 0!important;
+    }
+    .product_link:last-child {
+        margin-top: 6px;
+    }
+    .section3 {
+        padding: 0!important;
+    }
+    .section3>div {
+        margin-top: 0;
+    }
+}
+
+.valve_overhaul::after {
+    content: '';
+    background-size: 70% auto;
+    background-position: center;
+    background-image: url(../public/VALVE_OVERHAUL_REP.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.gas_box_overhaul::after {
+    content: '';
+    background-size: auto 60%;
+    background-position: center;
+    background-image: url(../public/GAS_BOX_OVERHAUL_REP.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.product_detail_button {
+    border-radius: 100px;
+    border: solid 1px white;
+    padding: 12px 24px;
+    transition: all ease 0.5s;
+    cursor: pointer;
+}
+
+.product_detail_button:hover {
+    background-color: white;
+    color: #333;
+}
+
+.section3 {
+    margin-top: 6px;
+    width: 100%;
+    height: 100%;
+    padding: 0 12px;
+}
+
+.section3>div {
+    background-color: rgba(0, 0, 0, 0.08);
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about_title {
+    margin: unset;
+    text-align: center;
+    color: #000;
+}
+
+.short_divider {
+    width: 100px;
+    height: 1px;
+    background-color: #333;
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+
+.about_service_bg {
+    color: white;
+    position: relative;
+    background: rgba(0, 0, 0, 0.5)!important;
+}
+
+.about_service_bg::after {
+    content: '';
+    background-size: 100% 100%;
+    background-size: cover;
+    background-position: top;
+    background-image: url(../public/main_section4_bg.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.about_service_bg>.about_title {
+    color: white!important;
+}
+
+.about_service_bg>.short_divider {
+    width: 100px;
+    height: 1px;
+    background-color: #fff;
+    margin-top: 12px;
+}
+
+.naver_map img {
+    max-width: 327px;
+    height: auto;
+    object-fit: cover;
 }
