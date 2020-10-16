@@ -1,19 +1,19 @@
-import styles from './company.module.css'
-import { FixedHeader, Footer } from '../index'
-import {Company as CompanyContent} from '../index'
+import styles from '../company/company.module.css'
+import { FixedHeader, Footer, Technology, Service } from '../index'
 const Company = (props) => {
     return (
         <div className={styles.container}>
             <FixedHeader />
             <main>
                 <h1 className={`${styles.title_container} ${styles.company_bg}`}>
-                    COMPANY
+                    TECHNOLOGY
                 </h1>
                 <div className={styles.inner_container}>
-                    <CompanyContent/>
+                    <Technology/>
+                    <Service/>
                 </div>
             </main>
-            <Footer/>
+            <Footer />
         </div>
     )
 }

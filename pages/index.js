@@ -1,16 +1,66 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
-
+import { useState, useEffect } from 'react'
 //images
 import Logo from '../public/22222.png'
 import ValveOverhaul from '../public/VALVE_OVERHAUL_REP.png'
 import GasBoxOverhaul from '../public/GAS_BOX_OVERHAUL_REP.png'
 
-const FixedHeader = () => {
+export const FixedHeader = () => {
+
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const [scrolled, setScrolled] = useState(false)
+    useEffect(() => {
+
+        window.onscroll = () => {
+            let offset = window.pageYOffset
+            if (offset > 0) {
+                setScrolled(true)
+            } else {
+                setScrolled(false)
+            }
+        }
+
+    }, [])
+
     return (
-        <div className={styles.header}>
-            <img src={Logo} />
+        <div className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
+            <Link href={"/"}>
+                <a>
+                    <img src={Logo} />
+                </a>
+            </Link>
+            <div className={styles.hamburger} onClick={() => { setIsMenuOpen(true) }}>
+                <svg width="24px" height="24px" viewBox="0 0 16 16" class="bi bi-list" fill="white" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                </svg>
+            </div>
+            <div className={`${styles.menu_container} ${isMenuOpen ? styles.open : ""}`}>
+                <svg className={styles.close} onClick={() => { setIsMenuOpen(false) }} width="24px" height="24px" viewBox="0 0 16 16" class="bi bi-x" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                </svg>
+                <Link href="/">
+                    <a className={styles.menu}>
+                        HOME
+                </a>
+                </Link>
+                <Link href="/company">
+                    <a className={styles.menu}>
+                        COMPANY
+                    </a>
+                </Link>
+                <Link href="/technology">
+                    <a className={styles.menu}>
+                        TECHNOLOGY
+                    </a>
+                </Link>
+                <Link href="/products">
+                    <a className={styles.menu}>
+                        PRODUCTS
+                    </a>
+                </Link>
+            </div>
         </div>
     )
 }
@@ -32,36 +82,9 @@ export default function Home() {
                         by Highly Integrated experiences<br />
                     </p>
                 </section>
-                <section className={styles.product_link_container}>
-                    <div className={`${styles.product_link} ${styles.valve_overhaul}`}>
-                        <h1>
-                            Valve overhaul
-                        </h1>
-                        <div className={styles.product_detail_button}>
-                            Learn More
-                        </div>
-                    </div>
-                    <div className={`${styles.product_link} ${styles.gas_box_overhaul}`}>
-                        <h1>
-                            Gas box overhaul
-                        </h1>
-                        <div className={styles.product_detail_button}>
-                            Learn More
-                        </div>
-                    </div>
-                </section>
-                <section className={styles.section3}>
-                    <div>
-                        <h1 className={styles.about_title}>About our company</h1>
-                        <div className={styles.short_divider} />
-                    </div>
-                </section>
-                <section className={styles.section3}>
-                    <div className={styles.about_service_bg}>
-                        <h1 className={styles.about_title}>About our service</h1>
-                        <div className={styles.short_divider} />
-                    </div>
-                </section>
+                <Technology />
+                <Company />
+                <Service />
                 <section className={styles.section3}>
                     <div>
                         <h1 className={styles.about_title}>Contact us</h1>
@@ -72,10 +95,108 @@ export default function Home() {
                     </div>
                 </section>
             </main>
-
-            <footer className={styles.footer}>
-                <img src={Logo} />
-            </footer>
+            <Footer />
         </div>
+    )
+}
+
+export const Technology = () => {
+    return (
+        <section className={styles.product_link_container}>
+            <div className={`${styles.product_link} ${styles.valve_overhaul}`}>
+                <img src={ValveOverhaul} />
+                <h1>
+                    Valve overhaul
+                </h1>
+                <div className={styles.desc}>Block valve에 관한 간단한 설명을 작성해주세요.</div>
+                <Link href="/products/valveOverhaul">
+                    <a>
+                        <div className={styles.product_detail_button}>
+                            Learn More
+                        </div>
+                    </a>
+                </Link>
+            </div>
+            <div className={`${styles.product_link} ${styles.gas_box_overhaul}`}>
+                <img src={GasBoxOverhaul} />
+                <h1>
+                    Gas box overhaul
+                </h1>
+                <div className={styles.desc}>gas box overhaul에 관한 간단한 설명을 작성해주세요.</div>
+                <Link href="/products/gasBoxOverhaul">
+                    <a>
+                        <div className={styles.product_detail_button}>
+                            Learn More
+                        </div>
+                    </a>
+                </Link>
+            </div>
+        </section>
+    )
+}
+
+export const Service = () => {
+    return (
+        <section className={styles.section3}>
+            <div className={styles.about_service_bg}>
+                <h1 className={styles.about_title}>About our service</h1>
+                <div className={styles.short_divider} />
+                <div className={styles.about_our_company}>
+                    <div className={styles.tech_container}>
+                        {
+                            techs.map(t => {
+                                return (
+                                    <div className={styles.tech}>
+                                        <div>{t.title}</div>
+                                        <div>{t.desc}</div>
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
+}
+
+let techs = [
+    {
+        title: "value overhaul",
+        desc: "세계최고의 기술력을 가진서비스를 제공합니다.다양한 서비스를 제공하면서, 다양한 기술을 개발하고 있습니다. 기타 내용을 입력하세요."
+    },
+    {
+        title: "value overhaul",
+        desc: "세계최고의 기술력을 가진서비스를 제공합니다.다양한 서비스를 제공하면서, 다양한 기술을 개발하고 있습니다. 기타 내용을 입력하세요."
+    },
+    {
+        title: "value overhaul",
+        desc: "세계최고의 기술력을 가진서비스를 제공합니다.다양한 서비스를 제공하면서, 다양한 기술을 개발하고 있습니다. 기타 내용을 입력하세요."
+    },
+]
+
+export const Company = () => {
+    return (
+        <section className={styles.section3}>
+            <div>
+                <h1 className={styles.about_title}>About our company</h1>
+                <div className={styles.short_divider} />
+                <div className={styles.about_our_company}>
+                    상세한 기업소개가 필요합니다. 기업소개 내용을 작성하여 전달주시면 이 영역에 노출하겠습니다. 상세한 기업소개가 필요합니다.
+                    기업소개 내용을 작성하여 전달주시면 이 영역에 노출하겠습니다.
+
+                    상세한 기업소개가 필요합니다. 기업소개 내용을 작성하여 전달주시면 이 영역에 노출하겠습니다.
+                    상세한 기업소개가 필요합니다. 기업소개 내용을 작성하여 전달주시면 이 영역에 노출하겠습니다.
+                </div>
+            </div>
+        </section>
+    )
+}
+
+export const Footer = () => {
+    return (
+        <footer className={styles.footer}>
+            <img src={Logo} />
+        </footer>
     )
 }
