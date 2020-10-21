@@ -19,16 +19,24 @@
 .footer {
     margin-top: 6px;
     width: 100vw;
-    height: 100px;
     border-top: 1px solid #eaeaea;
     display: flex;
+
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: black;
+    padding: 32px;
+
+    color: white;
+
+    font-size: 14px;
 }
 
 .footer img {
     height: 24px;
+
+    margin-bottom: 32px;
 }
 
 .footer a {
@@ -134,7 +142,7 @@
     background-size: 100% 100%;
     background-size: cover;
     background-position: top;
-    background-image: url(../public/main_section1_bg.png);
+    background-image: url(../public/main_section1_bg.jpg);
     background-repeat: no-repeat;
     position: absolute;
     width: 100%;
@@ -324,7 +332,7 @@
     content: '';
     background-size: 70% auto;
     background-position: center;
-    background-image: url(../public/VALVE_OVERHAUL_REP.png);
+    background-image: url(../public/VALVE_OVERHAUL_REP.jpg);
     background-repeat: no-repeat;
     position: absolute;
     width: 100%;
@@ -356,6 +364,8 @@
     cursor: pointer;
     background-color: black;
     color: #fff;
+
+    margin-top: 24px;
 }
 
 .product_detail_button:hover {
@@ -406,7 +416,7 @@
     background-size: 100% 100%;
     background-size: cover;
     background-position: top;
-    background-image: url(../public/main_section4_bg.png);
+    background-image: url(../public/main_section4_bg.jpg);
     background-repeat: no-repeat;
     position: absolute;
     width: 100%;

@@ -13,14 +13,24 @@ const ValveOverhaul = (props) => {
                 <div className={styles.inner_container}>
                     <div className={styles.wrapper}>
                         <ProductContainer
-                            title="Block Valves"
-                            desc="Block valve에 관한 설명을 작성해주세요."
-                            products={blockValveProducts}
+                            title="VCR TYPE GAS BOX"
+                            products={VCR_TYPE_GAS_BOX}
                         />
                         <ProductContainer
-                            title="Special Valves"
-                            desc="Special valve에 관한 설명을 작성해주세요."
-                            products={SpeicalValveProducts}
+                            title="C-SEAL TYPE GAS BOX"
+                            products={C_SEAL_TYPE_GAS_BOX}
+                        />
+                        <ProductContainer
+                            title="W-SEAL TYPE GAS BOX"
+                            products={W_SEAL_TYPE_GAS_BOX}
+                        />
+                        <ProductContainer
+                            title="RPSC OVERHAUL"
+                            products={RPSC_OVERHAUL}
+                        />
+                        <ProductContainer
+                            title="RF GENERATOR MODEL"
+                            products={RF_GENERATOR_MODEL}
                         />
                     </div>
                 </div>
@@ -38,7 +48,6 @@ const ProductContainer = ({ title, desc, products }) => {
         <div className={styles.product_container}>
             <div className={styles.head}>
                 <div className={styles.title}>{title}</div>
-                <div className={styles.desc}>{desc}</div>
             </div>
             <div className={styles.products}>
                 {
@@ -56,88 +65,178 @@ const ProductContainer = ({ title, desc, products }) => {
     )
 }
 
-import BlockValve1 from '../../../public/block_valve_1.png'
-import BlockValve2 from '../../../public/block_valve_2.png'
-import BlockValve3 from '../../../public/block_valve_3.png'
-import BlockValve4 from '../../../public/block_valve_4.png'
-const blockValveProducts = [
+import V1 from '../../../public/VCR TYPE GAS BOX 1.png'
+import V2 from '../../../public/VCR TYPE GAS BOX 2.png'
+import V3 from '../../../public/VCR TYPE GAS BOX 3.png'
+import V4 from '../../../public/VCR TYPE GAS BOX 4.png'
+
+const VCR_TYPE_GAS_BOX = [
     {
-        image: BlockValve1,
-        name: "KITZ block valve"
+        image: V1,
+        name: "VCR TYPE GAS BOX 1"
     },
     {
-        image: BlockValve2,
-        name: "AMAT Mini block"
+        image: V2,
+        name: "VCR TYPE GAS BOX 2"
     },
     {
-        image: BlockValve3,
-        name: "FUJIKIN 5way block valve"
+        image: V3,
+        name: "VCR TYPE GAS BOX 3"
     },
     {
-        image: BlockValve4,
-        name: "IPS Feeding block assembly"
+        image: V4,
+        name: "VCR TYPE GAS BOX 4"
     },
 ]
 
-import SpecialValve1 from '../../../public/special_valve_1.png'
-import SpecialValve2 from '../../../public/special_valve_2.png'
-import SpecialValve3 from '../../../public/special_valve_3.png'
-import SpecialValve4 from '../../../public/special_valve_4.png'
-import SpecialValve5 from '../../../public/special_valve_5.png'
-import SpecialValve6 from '../../../public/special_valve_6.png'
-import SpecialValve7 from '../../../public/special_valve_7.png'
-import SpecialValve8 from '../../../public/special_valve_8.png'
-import SpecialValve9 from '../../../public/special_valve_9.png'
-import SpecialValve10 from '../../../public/special_valve_10.png'
-import SpecialValve11 from '../../../public/special_valve_11.png'
-import SpecialValve12 from '../../../public/special_valve_12.png'
-const SpeicalValveProducts = [
+import CS1 from '../../../public/C-SEAL TYPE GAS BOX 1.png'
+import CS2 from '../../../public/C-SEAL TYPE GAS BOX 2.png'
+import CS3 from '../../../public/C-SEAL TYPE GAS BOX 3.png'
+import CS4 from '../../../public/C-SEAL TYPE GAS BOX 4.png'
+import CS5 from '../../../public/C-SEAL TYPE GAS BOX 5.png'
+import CS6 from '../../../public/C-SEAL TYPE GAS BOX 6.png'
+import CS7 from '../../../public/C-SEAL TYPE GAS BOX 7.png'
+import CS8 from '../../../public/C-SEAL TYPE GAS BOX 8.png'
+const C_SEAL_TYPE_GAS_BOX = [
     {
-        image: SpecialValve1,
-        name: "Actuator 분해 전,후"
+        image: CS1,
+        name: "C-SEAL TYPE GAS BOX 1"
     },
     {
-        image: SpecialValve2,
-        name: "Mainfold valves"
+        image: CS2,
+        name: "C-SEAL TYPE GAS BOX 2"
     },
     {
-        image: SpecialValve3,
-        name: "Mainfold valves"
+        image: CS3,
+        name: "C-SEAL TYPE GAS BOX 3"
     },
     {
-        image: SpecialValve4,
-        name: "Mainfold valves"
+        image: CS4,
+        name: "C-SEAL TYPE GAS BOX 4"
     },
     {
-        image: SpecialValve5,
-        name: "Mainfold valves"
+        image: CS5,
+        name: "C-SEAL TYPE GAS BOX 6"
     },
     {
-        image: SpecialValve6,
-        name: "Mainfold valves"
+        image: CS6,
+        name: "C-SEAL TYPE GAS BOX 6"
     },
     {
-        image: SpecialValve7,
-        name: "Mainfold valves"
+        image: CS7,
+        name: "C-SEAL TYPE GAS BOX 7"
     },
     {
-        image: SpecialValve8,
-        name: "Mainfold valves"
+        image: CS8,
+        name: "C-SEAL TYPE GAS BOX 8"
+    },
+]
+
+import WS1 from '../../../public/W-SEAL TYPE GAS BOX 1.png'
+import WS2 from '../../../public/W-SEAL TYPE GAS BOX 2.png'
+import WS3 from '../../../public/W-SEAL TYPE GAS BOX 3.png'
+import WS4 from '../../../public/W-SEAL TYPE GAS BOX 4.png'
+import WS5 from '../../../public/W-SEAL TYPE GAS BOX 5.png'
+import WS6 from '../../../public/W-SEAL TYPE GAS BOX 6.png'
+import WS7 from '../../../public/W-SEAL TYPE GAS BOX 7.png'
+import WS8 from '../../../public/W-SEAL TYPE GAS BOX 8.png'
+const W_SEAL_TYPE_GAS_BOX = [
+    {
+        image: WS1,
+        name: "W-SEAL TYPE GAS BOX 1"
     },
     {
-        image: SpecialValve9,
-        name: "Mainfold valves"
+        image: WS2,
+        name: "W-SEAL TYPE GAS BOX 2"
     },
     {
-        image: SpecialValve10,
-        name: "Mainfold valves"
+        image: WS3,
+        name: "W-SEAL TYPE GAS BOX 3"
     },
     {
-        image: SpecialValve11,
-        name: "Mainfold valves"
+        image: WS4,
+        name: "W-SEAL TYPE GAS BOX 4"
     },
     {
-        image: SpecialValve12,
-        name: "Mainfold valves"
+        image: WS5,
+        name: "W-SEAL TYPE GAS BOX 5"
+    },
+    {
+        image: WS6,
+        name: "W-SEAL TYPE GAS BOX 6"
+    },
+    {
+        image: WS7,
+        name: "W-SEAL TYPE GAS BOX 7"
+    },
+    {
+        image: WS8,
+        name: "W-SEAL TYPE GAS BOX 8"
+    },
+]
+
+import RP1 from '../../../public/RPSC OVERHAUL 1.png'
+import RP2 from '../../../public/RPSC OVERHAUL 2.png'
+import RP3 from '../../../public/RPSC OVERHAUL 3.png'
+import RP4 from '../../../public/RPSC OVERHAUL 4.png'
+const RPSC_OVERHAUL = [
+    {
+        image: RP1,
+        name: "RPSC OVERHAUL 1"
+    },
+    {
+        image: RP2,
+        name: "RPSC OVERHAUL 2"
+    },
+    {
+        image: RP3,
+        name: "RPSC OVERHAUL 3"
+    },
+    {
+        image: RP4,
+        name: "RPSC OVERHAUL 4"
+    },
+]
+
+import RF1 from '../../../public/RF GENERATOR MODEL 1.png'
+import RF2 from '../../../public/RF GENERATOR MODEL 2.png'
+import RF3 from '../../../public/RF GENERATOR MODEL 3.png'
+import RF4 from '../../../public/RF GENERATOR MODEL 4.png'
+import RF5 from '../../../public/RF GENERATOR MODEL 5.png'
+import RF6 from '../../../public/RF GENERATOR MODEL 6.png'
+import RF7 from '../../../public/RF GENERATOR MODEL 7.png'
+import RF8 from '../../../public/RF GENERATOR MODEL 8.png'
+const RF_GENERATOR_MODEL = [
+    {
+        image: RF1,
+        name: "RF GENERATOR MODEL 1"
+    },
+    {
+        image: RF2,
+        name: "RF GENERATOR MODEL 2"
+    },
+    {
+        image: RF3,
+        name: "RF GENERATOR MODEL 3"
+    },
+    {
+        image: RF4,
+        name: "RF GENERATOR MODEL 4"
+    },
+    {
+        image: RF5,
+        name: "RF GENERATOR MODEL 5"
+    },
+    {
+        image: RF6,
+        name: "RF GENERATOR MODEL 6"
+    },
+    {
+        image: RF7,
+        name: "RF GENERATOR MODEL 7"
+    },
+    {
+        image: RF8,
+        name: "RF GENERATOR MODEL 8"
     },
 ]
