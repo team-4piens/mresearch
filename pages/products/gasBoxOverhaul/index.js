@@ -55,7 +55,7 @@ const ProductContainer = ({ title, desc, products }) => {
                         return (
                             <div className={styles.product}>
                                 <img src={p.image} />
-                                <div>{p.name}</div>
+                                {/* <div>{p.name}</div> */}
                             </div>
                         )
                     })

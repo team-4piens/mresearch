@@ -21,21 +21,17 @@
     width: 100vw;
     border-top: 1px solid #eaeaea;
     display: flex;
-
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: black;
     padding: 32px;
-
     color: white;
-
     font-size: 14px;
 }
 
 .footer img {
     height: 24px;
-
     margin-bottom: 32px;
 }
 
@@ -364,7 +360,6 @@
     cursor: pointer;
     background-color: black;
     color: #fff;
-
     margin-top: 24px;
 }
 
@@ -387,7 +382,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     padding: 24px 0;
 }
 
@@ -438,12 +432,35 @@
 }
 
 .naver_map {
+    width: 327px;
+    height: 200px;
+    margin-bottom: 8px;
+
+    border: solid 1px rgba(0,0,0,0.6);
+}
+
+.map_link {
+    position: relative;
+    width: 327px;
+    height: 200px!important;
+
+}
+
+.map_link>svg {
+    position: absolute;
+    right: 12px;
+    top: -40px;
 }
 
 .about_our_company {
     width: 100vw;
     padding: 0 24px;
-    max-width: 1024px;
+    max-width: 767px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    word-break: keep-all;
 }
 
 .tech_container {
@@ -452,10 +469,12 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    color: white!important;
+    word-break: keep-all;
 }
 
 .tech {
-    width: calc(33% - 12px);
+    width: 100%;
     border: solid 1px white;
     padding: 24px;
     display: flex;
@@ -465,16 +484,26 @@
     text-align: center;
 }
 
-.tech>div:nth-child(1) {
+/* .tech>div:nth-child(1) {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 8px;
     color: rgb(151, 201, 255);
-}
+} */
 
 @media(max-width: 767px) {
     .tech {
         width: calc(100%);
         margin-bottom: 12px;
     }
+}
+
+.contact_title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    color: rgba(0,0,0,0.6)
 }
