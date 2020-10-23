@@ -1,0 +1,4 @@
+Sitemap: https://www.mresearchinc.com/sitemap.xml
+
+User-agent: *
+Allow: /*
