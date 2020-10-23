@@ -84,6 +84,7 @@ export default function Home() {
                 <meta name="Yeti" content="index,follow" />
                 <meta name="googlebot" content="All" />
                 <meta name="googlebot" content="index,follow" />
+                <meta name="naver-site-verification" content="5389c10c62109bb4a1beeaeeab22257eb451eede" />
             </Head>
             <FixedHeader />
             <main className={styles.main}>
