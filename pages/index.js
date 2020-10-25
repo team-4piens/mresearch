@@ -86,6 +86,7 @@ export default function Home() {
                 <meta name="googlebot" content="All" />
                 <meta name="googlebot" content="index,follow" />
                 <meta name="naver-site-verification" content="5389c10c62109bb4a1beeaeeab22257eb451eede" />
+                <title>엠리서치</title>
             </Head>
             <FixedHeader />
             <main className={styles.main}>
