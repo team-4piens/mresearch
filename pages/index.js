@@ -70,14 +70,15 @@ export default function Home() {
         <div className={styles.container}>
             <Head>
                 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet" />
-                <link rel="shortcut icon" href="https://www.mresearchinc.com/icon.png" />
+                <link rel="shortcut icon" href="https://www.mresearchinc.com/favicon.ico" type="image/x-icon"/>
+                <link rel="icon" href="https://www.mresearchinc.com/favicon.ico" type="image/x-icon"/>
                 <link rel="canonical" href="https://www.mresearchinc.com/" />
-                <meta property="og:title" content="M RESEARCH" />
+                <meta property="og:title" content="엠리서치" />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://www.mresearchinc.com/" />
                 <meta property="og:image" content="https://www.mresearchinc.com/og_image.png" />
-                <meta property="og:description" content="엠리서치입니다." />
-                <meta name="description" content="엠리서치입니다." />
+                <meta property="og:description" content="엠리서치입니다. 가스제어부와 각종 밸브류, 유량제어시스템 기타 플라즈마소스 등 대부분의 반도체 설비들의 오버홀 서비스를 제공합니다." />
+                <meta name="description" content="엠리서치입니다. 가스제어부와 각종 밸브류, 유량제어시스템 기타 플라즈마소스 등 대부분의 반도체 설비들의 오버홀 서비스를 제공합니다." />
                 <meta name="NaverBot" content="All" />
                 <meta name="NaverBot" content="index,follow" />
                 <meta name="Yeti" content="All" />
