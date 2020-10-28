@@ -98,6 +98,7 @@
 
 .products {
     display: flex;
+    display: -ms-flexbox;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
@@ -114,6 +115,14 @@
     margin-bottom: 48px;
     padding: 0 24px;
     text-align: center;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .products>.product>img {
+        flex: 0 0 auto;
+        max-width: 327px;
+        max-height: 100%;
+    }
 }
 
 .products>.product>img {
@@ -140,12 +149,8 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-
-
     color: rgba(0, 0, 0, 0.3);
-
     border-bottom: solid 0.5px rgba(0, 0, 0, 0.1);
-
     background-color: rgba(0, 0, 0, 0.03);
 }
 
